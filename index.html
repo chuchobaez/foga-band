@@ -14,11 +14,17 @@
       background-attachment: fixed;
     }
   </style> -->
+
+  <style>
+    body {
+      padding-top: 70px; /* Ajusta el valor según la altura de tu barra de navegación */
+    }
+  </style>
   
 </head>
 <body>
   
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Banda de Música</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -213,5 +219,17 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+          $('.navbar').addClass('fixed');
+        } else {
+          $('.navbar').removeClass('fixed');
+        }
+      });
+    });
+
+  </script>
 </body>
 </html>
