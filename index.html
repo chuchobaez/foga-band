@@ -19,6 +19,15 @@
     body {
       padding-top: 70px; /* Ajusta el valor según la altura de tu barra de navegación */
     }
+    #titulo-inicio {
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+    }
+
+    #titulo-inicio:hover {
+      color: red; /* Cambia el color al pasar el cursor por encima */
+    }
+
   </style>
   
 </head>
@@ -51,7 +60,7 @@
   </nav>
 
 <div class="container" id="inicio">
-  <h1 class="text-center mb-4">Bienvenido a la Banda de Música</h1>
+  <h1 class="text-center mb-4" id="titulo-inicio">Bienvenido a la Banda de Música</h1>
   <p class="text-center mb-4">¡Disfruta de nuestros conciertos y conoce a nuestros talentosos miembros!</p>
 </div>
 
@@ -228,6 +237,18 @@
         } else {
           $('.navbar').removeClass('fixed');
         }
+      });
+    });
+
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#titulo-inicio').mouseenter(function() {
+        $(this).text('¡Hola!'); /* Cambia el texto cuando el cursor entra */
+      });
+
+      $('#titulo-inicio').mouseleave(function() {
+        $(this).text('Bienvenido a la Banda de Música'); /* Restaura el texto cuando el cursor sale */
       });
     });
 
