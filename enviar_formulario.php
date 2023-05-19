@@ -2,6 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nombre = $_POST["nombre"];
   $email = $_POST["email"];
+  $telefono = $_POST["telefono"];
   $mensaje = $_POST["mensaje"];
 
   // Configuración del correo electrónico
@@ -11,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Cuerpo del correo
   $contenido = "Nombre: $nombre\n";
   $contenido .= "Email: $email\n";
+  $contenido = "Telefono: $telefono\n";
   $contenido .= "Mensaje: $mensaje\n";
 
   // Envío del correo electrónico
