@@ -20,16 +20,21 @@
       padding-top: 70px; /* Ajusta el valor según la altura de tu barra de navegación */
     }
     #titulo-inicio {
-  transition: color 0.3s ease-in-out;
-  cursor: pointer;
+      transition: transform 0.3s ease-in-out;
     }
+
+    #titulo-inicio:hover {
+      transform: scale(1.1); /* Agranda el título al pasar el cursor por encima */
+      /* También puedes agregar otras propiedades CSS para mover el título */
+    }
+
   </style>
   
 </head>
 <body>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Banda de Música</a>
+    <a class="navbar-brand" href="#">FOGA BAND</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,7 +60,7 @@
   </nav>
 
 <div class="container" id="inicio">
-  <h1 class="text-center mb-4" id="titulo-inicio">Bienvenido a la Banda de Música</h1>
+  <h1 class="text-center mb-4" id="titulo-inicio">Bienvenido a FOGA</h1>
   <p class="text-center mb-4">¡Disfruta de nuestros conciertos y conoce a nuestros talentosos miembros!</p>
 </div>
 
@@ -236,7 +241,7 @@
     });
 
   </script>
-  <script>
+<!--   <script>
     $(document).ready(function() {
       $('#titulo-inicio').mouseenter(function() {
         $(this).text('¡Hola!'); /* Cambia el texto cuando el cursor entra */
@@ -247,6 +252,6 @@
       });
     });
 
-  </script>
+  </script> -->
 </body>
 </html>
