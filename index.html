@@ -90,7 +90,8 @@
   <p class="text-center mb-4">¡Disfruta de nuestros conciertos y conoce a nuestros talentosos miembros!</p>
 </div>
 
-<section id="fotos">
+<section id="fotos" class="container text-center">
+  
   <div class="slideshow-container">
     <div class="slide">
       <img src="img/timi.jpg" alt="Foto 1">
@@ -332,8 +333,13 @@
         updateActiveButton(nextIndex);
       }
 
+      // Mostrar la primera imagen al cargar la página
+      showSlide(0);
+      updateActiveButton(0);
+
       setInterval(nextSlide, 5000); /* Cambia de slide cada 5 segundos */
     });
+
 
   </script>
 <!--   <script>
